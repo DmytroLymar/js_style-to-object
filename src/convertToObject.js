@@ -7,9 +7,8 @@
  */
 function convertToObject(sourceString) {
   const formatedObj = {};
-  const cleanedString = sourceString.replace(/\/\*[\s\S]*?\*\//g, '');
 
-  cleanedString.split(';').forEach((part) => {
+  sourceString.split(';').forEach((part) => {
     if (part.trim()) {
       const splitedPart = part.split(':');
       const key = splitedPart[0].trim();
